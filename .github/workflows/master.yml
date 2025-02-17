@@ -5,7 +5,7 @@ on:
     branches: [master] # Ensures the workflow triggers on pushes to master
 
   schedule:
-    - cron: '0 */5 * * 1-5' # Executes every 5 hours without weekends
+    - cron: '0 0 * * 1-6' # Executes every day at midnight without Sundays
 
   workflow_dispatch: # Allows manual triggering from the GitHub UI
 
