@@ -2,7 +2,9 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: "0 0 * * 1-5" # Runs at midnight UTC every weekday (Monday to Friday)
+    - cron: "0 0 * * 1-6"   # Runs at midnight UTC every day except Sunday
+    - cron: "0 8 * * 1-6"   # Runs at 8 AM UTC every day except Sunday
+    - cron: "0 16 * * 1-6"  # Runs at 4 PM UTC every day except Sunday
 
 jobs:
   commit:
